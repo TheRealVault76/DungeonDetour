@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "dungeondetour",
+	"version": "${version}",
+	"name": "Dungeon Detour",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Vault!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/dungeondetour/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.vault.dungeondetour.DungeonDetour"
+		],
+		"fabric-datagen": [
+			"net.vault.dungeondetour.DungeonDetourDataGenerator"
+		],
+		"client": [
+			"net.vault.dungeondetour.DungeonDetourModClient"
+		]
+	},
+	"mixins": [
+		"dungeondetour.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
