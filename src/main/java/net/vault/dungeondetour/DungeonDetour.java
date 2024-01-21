@@ -2,6 +2,9 @@ package net.vault.dungeondetour;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.vault.dungeondetour.block.ModBlocks;
+import net.vault.item.ModItemGroup;
+import net.vault.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +14,8 @@ public class DungeonDetour implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModItemGroup.registerItemGroups();
 	}
 }
